@@ -22,19 +22,19 @@ function the_breadcrumb() {
 		return;
 	}
 
+	// Build the breadcrums
+	echo '<div class="br-breadcrumb">
+	<ul class="crumb-list">
+                  <li class="crumb home">
+                    <a class="br-button circle" href="/"><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
+                   ';
+
 	// Do not display on the homepage
 	if ( !is_front_page() ) {
 
-		// Build the breadcrums
-		echo '<nav id="breadcrumb-wrapper" aria-label="breadcrumb" role="navigation" class="row m-0 align-items-center"><ol id="' . $breadcrums_id . '" class="' . $breadcrums_class . ' col col-md-auto">';
-
-		// Home page
-		echo '<li class="item-home"><span class="sr-only">Você está aqui:</span> <a class="bread-link icon-home" href="' . get_home_url() . '" title="' . $home_title . '"><span>' . $home_title . '</span></a></li>';
-		echo '<li class="separator separator-home"> ' . $separator . ' </li>';
-
 		if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
 
-			echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title('', false) . '</strong></li>';
+			echo '<li class="crumb"><strong>' . post_type_archive_title('', false) . '</strong></li>';
 
 		} else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
 
@@ -57,10 +57,9 @@ function the_breadcrumb() {
 			$custom_term_name = get_queried_object()->name;
 			$custom_tax = get_taxonomy(get_queried_object()->taxonomy);
 			$custom_tax_name = $custom_tax->label;
-			
-			echo '<li class="item-cat item-custom-tax-' . $custom_tax->name . '">' . $custom_tax_name . '</li>';
-			echo '<li class="separator">&gt;</li>';
-			echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . $custom_term_name . '</strong></li>';
+			echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i></li>';
+			echo '<li class="crumb item-custom-tax-' . $custom_tax->name . '">' . $custom_tax_name . '</li>';
+			echo "<li class=\"crumb\" data-active=\"active\">$custom_term_name</strong></li>";
 
 		} else if ( is_single() ) {
 
@@ -76,12 +75,10 @@ function the_breadcrumb() {
 				// var_dump($post_type_object);
 
                 if( $post_type_archive ){
-                    echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+                    echo '<li class="crumb item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 } else {
-                    echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . home_url($post_type_object->rewrite['slug']) . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+                    echo '<li class="crumb item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . home_url($post_type_object->rewrite['slug']) . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 }
-				echo '<li class="separator"> ' . $separator . ' </li>';
-
 			}
 
 			// Get post category info
@@ -267,18 +264,14 @@ function the_breadcrumb() {
 	echo '<div class="col p-0">';
 
 		get_template_part( 'template-parts/subpages-menu', 'page' );
-	echo '</div>';
-
-	echo '</nav>';
-
+	
 	} else {
 
-		// Build the breadcrums
-		echo '<nav aria-label="breadcrumb" role="navigation" class="col"><ol id="' . $breadcrums_id . '" class="' . $breadcrums_class . '">';
-		// Home page
-		echo '<li class="item-home"><span>Você está aqui:</span> <a class="bread-link icon-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
-		echo '</ol></nav>';
+
+		echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i><a href="/">Início</a>
+		</li>';
 
 	}
 
+	echo "</ul></div>";
 }

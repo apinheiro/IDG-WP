@@ -48,6 +48,7 @@ if ( ! function_exists( 'idg_wp_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'featured-links' => esc_html__( 'Featured links', 'idg-wp' ),
+			'menu-lateral' => esc_html__('Sidebar Menu', 'idg-wp'),
 			// 'page-info-menu' => esc_html__( 'Page info support menu', 'idg-wp' ),
 		) );
 
@@ -467,21 +468,18 @@ function idg_wp_get_available_social_networks() {
 	
 }
 
-
-
-
 function custom_search_form( $form ) {
-	$form = '<div class="header-search" id="main-searchbox">
-            <?php get_search_form(); ?>
+	$form = '<form role="search" method="get" id="main-search" action="http://172.18.0.4/">
+			<div class="header-search" id="main-searchbox">
               <div class="br-input has-icon">
                 <label for="searchbox">Texto da pesquisa</label>
                 <input id="searchbox" type="text" placeholder="O que você procura?" value="' . get_search_query() . '" name="s"/>
                 <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
                 </button>
               </div>
-              <button class="br-button circle search-close ml-1" type="button" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
+              <button class="br-button circle search-close ml-1" type="submit" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
               </button>
-            </div>';
+            </div></form>';
 
 	return $form;
   }

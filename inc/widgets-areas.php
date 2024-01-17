@@ -106,13 +106,17 @@ function idg_wp_widgets_scripts ( $hook ) {
 	if ( $hook === 'widgets.php' ) {
 		wp_localize_script( 'idg-wp-admin-scripts', 'idg_admin', array(
 			'ajaxurl'       => admin_url( 'admin-ajax.php' ),
-			'idg_custom_sections_form'   => sprintf( '<form id="idg-custom-sections" method="post" action="'. admin_url('/widgets.php') .'"><div class="widgets-holder-wrap"><h2 class="sidebar-name">%1$s</h2><p class="description">%2$s</p><input type="text" class="widefat" name="idg-section-name" placeholder="%3$s"><input type="text" class="widefat" name="idg-section-desc" placeholder="%4$s"><div class="widget-control-actions"><div class="alignright">'. wp_nonce_field( 'idg_wp_admin_widgets_nonce', 'idg_wp_admin_widgets_nonce' ) .'<input type="submit" name="idg-create-section" class="button button-primary right" value="%5$s"></div></div></div></form>',
-				esc_html__( 'Custom sections', 'idg-wp' ),
-				esc_html__( 'Add widgets areas to the home page.', 'idg-wp' ),
-				esc_html__( 'Section title', 'idg-wp' ),
-				esc_html__( 'Section description', 'idg-wp' ),
-				esc_html__( 'Create section', 'idg-wp' )
-			),
+			'idg_custom_sections_form'   => 
+				'<form id="idg-custom-sections" method="post" action="'. 
+					admin_url('/widgets.php') .
+					'"><div class="widgets-holder-wrap"><h2 class="sidebar-name"'. esc_html__( 'Custom sections', 'idg-wp' ) .
+					'</h2><p class="description">'.esc_html__( 'Add widgets areas to the home page.', 'idg-wp' ).
+					'</p><input type="text" class="widefat" name="idg-section-name" placeholder="'.esc_html__( 'Section title', 'idg-wp' ).
+					'"><input type="text" class="widefat" name="idg-section-desc" placeholder="'.esc_html__( 'Section description', 'idg-wp' ).
+					'"><div class="widget-control-actions"><div class="alignright">'. 
+					wp_nonce_field( 'idg_wp_admin_widgets_nonce', 'idg_wp_admin_widgets_nonce' ) .
+					'<input type="submit" name="idg-create-section" class="button button-primary right" value="'.esc_html__( 'Create section', 'idg-wp' ).
+					'"></div></div></div></form>'
 		) );
 
 		if ( isset( $_POST['idg-create-section'] ) ) :
