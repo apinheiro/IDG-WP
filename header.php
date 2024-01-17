@@ -25,6 +25,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/favicon-16x16.png" />
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/manifest.json" />
 
+	<link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css" />
+
 	<?php wp_head(); ?>
 </head>
 
