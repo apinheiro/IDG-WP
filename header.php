@@ -9,14 +9,6 @@
  * @package Identidade_Digital_do_Governo_-_WordPress
  */
 
-add_filter( 'nav_menu_link_attributes', 'wpse156165_menu_add_class', 10, 3 );
-
-function wpse156165_menu_add_class( $atts, $item, $args ) {
-    $class = 'br-item'; // or something based on $item
-    $atts['class'] = $class;
-    return $atts;
-}
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -28,9 +20,9 @@ function wpse156165_menu_add_class( $atts, $item, $args ) {
 
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/favicon-16x16.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= get_template_directory_uri(); ?>/assets/img/favicons/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= get_template_directory_uri(); ?>/assets/img/favicons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= get_template_directory_uri(); ?>/assets/img/favicons/favicon-16x16.png" />
 	
 	<!-- Fonte Rawline-->
     <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"/>
@@ -52,7 +44,10 @@ function wpse156165_menu_add_class( $atts, $item, $args ) {
       <header class="br-header mb-4" id="header" data-sticky="data-sticky">
         <div class="container-fluid">
           <div class="header-top">
-            <div class="header-logo"><img src="https://apinheiro.github.io/tainacan-site/govbr/imagens/logo_spu.png" alt="logo"/><span class="br-divider vertical"></span>
+            <div class="header-logo">
+              <a href="/">
+              <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"/></a>
+              <span class="br-divider vertical"></span>
               <div class="header-sign">Minstério da Gestão e da Inovação em Serviços Públicos</div>
             </div>
             <div class="header-actions">
@@ -63,16 +58,17 @@ function wpse156165_menu_add_class( $atts, $item, $args ) {
                   <div class="header">
                     <div class="title">Acesso Rápido</div>
                   </div>
+                  <div class="br-list">
                   <?php
 					$menu_args = array(
 						'menu'              => 'featured-links',
 						'theme_location'    => 'featured-links',
 						'depth'             => 1,
 						'container'         => 'ul',
-                        'list_item_class' => 'br-item',
-						'menu_class'   => 'nav d-none d-md-flex',
+						'menu_class'        => 'nav d-none d-md-flex',
 					);
 					wp_nav_menu($menu_args); ?>
+               </div>
                 </div>
               </div><span class="br-divider vertical mx-half mx-sm-1"></span>
               <div class="header-functions dropdown">

@@ -486,3 +486,12 @@ function custom_search_form( $form ) {
 	return $form;
   }
   add_filter( 'get_search_form', 'custom_search_form', 40 );
+
+
+function wpse156165_menu_add_class( $atts, $item, $args ) {
+    $class = 'br-item'; // or something based on $item
+    $atts['class'] = $class;
+    return $atts;
+}
+
+add_filter( 'nav_menu_link_attributes', 'wpse156165_menu_add_class', 10, 3 );
