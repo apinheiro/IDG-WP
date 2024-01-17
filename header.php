@@ -15,31 +15,43 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	<meta name="viewport"  content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/apple-touch-icon.png" />
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/favicon-32x32.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicons/favicon-16x16.png" />
-	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/manifest.json" />
-
+	
 	<link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css" />
-
+	<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"
+    />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class="template-base">
+	<nav class="br-skiplink">
+		<a class="br-item" href="#main-content" accesskey="1">Ir para o conteúdo (1/4) 
+			<span class="br-tag text ml-1">1</span></a><a class="br-item" href="#header-navigation" accesskey="2">Ir para o menu (2/4) <span class="br-tag text ml-1">2</span></a><a class="br-item" href="#main-searchbox" accesskey="3">Ir para a busca (3/4) <span class="br-tag text ml-1">3</span></a><a class="br-item" href="#footer" accesskey="4">Ir para o rodapé (4/4) <span class="br-tag text ml-1">4</span></a>
+    </nav>
 <a class="skip-link sr-only" href="#main">
     <?php esc_html_e( 'Skip to content', 'idg-wp' ); ?>
 </a>
 
-<header id="main-header">
+<header class="br-header mb-4" id="header" data-sticky="data-sticky">
+<div class="container-fluid">
+		
 	<div id="barra-brasil"></div>
-
-	<div class="container">
+	<div class="header-top">
+			<div class="header-logo"><img src="https://apinheiro.github.io/tainacan-site/govbr/imagens/logo_spu.png" alt="logo"/><span class="br-divider vertical"></span>
+              <div class="header-sign">Minstério da Gestão e da Inovação em Serviços Públicos</div>
+            </div>
+		</div>
 		<div class="row">
 			<div class="col-md-6 col-lg-8 title-wrapper">
 				<p class="site-denomination mb-0"><?php bloginfo( 'description' ); ?></p>
