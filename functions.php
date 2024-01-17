@@ -468,3 +468,21 @@ function idg_wp_get_available_social_networks() {
 }
 
 
+
+
+function custom_search_form( $form ) {
+	$form = '<div class="header-search" id="main-searchbox">
+            <?php get_search_form(); ?>
+              <div class="br-input has-icon">
+                <label for="searchbox">Texto da pesquisa</label>
+                <input id="searchbox" type="text" placeholder="O que você procura?" value="' . get_search_query() . '" name="s"/>
+                <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button class="br-button circle search-close ml-1" type="button" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </div>';
+
+	return $form;
+  }
+  add_filter( 'get_search_form', 'custom_search_form', 40 );
