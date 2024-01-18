@@ -14,12 +14,14 @@
 
 get_header();
 ?>
-
-	<main id="main" class="site-main">
+<div class="row">
+<div class="col-md-12 col-sm-12">
 
 		<section class="carousel-wrapper">
 			<?php get_template_part('template-parts/jumbotron-carousel'); ?>
 		</section>
+
+		<?php get_template_part('template-parts/sections-entrada'); ?>
 
 		<section id="news" class="pb-5 pt-5 bg-grey-2">
 			<div class="container">

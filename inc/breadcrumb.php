@@ -31,12 +31,14 @@ function the_breadcrumb() {
 
 	// Do not display on the homepage
 	if ( !is_front_page() ) {
-
+		echo "<!-- is front -->";
 		if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
+			echo "<!-- arquivo -->";
 
 			echo '<li class="crumb"><strong>' . post_type_archive_title('', false) . '</strong></li>';
 
 		} else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
+			echo "<!-- is tax -->";
 
 			// Uma taxonomia pode ser usada por mais de um post type. Logo isso não faz sentido
 			// 
@@ -257,20 +259,14 @@ function the_breadcrumb() {
 
 			// 404 page
 			echo '<li>' . 'Error 404' . '</li>';
+		} else{
+			echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i><a href="/">Início</a>
+				</li>';
 		}
-
-		echo '</ol>';
-
-	echo '<div class="col p-0">';
-
-		get_template_part( 'template-parts/subpages-menu', 'page' );
 	
 	} else {
-
-
 		echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i><a href="/">Início</a>
 		</li>';
-
 	}
 
 	echo "</ul></div>";
