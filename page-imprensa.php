@@ -1,15 +1,12 @@
-<?php /* Template Name: Imprensa */ ?>
+<?php /* Template Name: Imprensa */ 
 
-<?php get_header(); ?>
+get_header();
+ ?>
 
-<main id="page-imprensa" class="site-main">
-  <div class="container">
-    <div class="row">
-      <?php the_breadcrumb(); ?>
-    </div>
-
+<div class="row">
+					<div class="col-md-12 col-sm-12">
     <?php wp_reset_postdata(); ?>
-
+</div>
   </div>
 
   <div id="content">

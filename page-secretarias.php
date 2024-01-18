@@ -16,14 +16,8 @@
 
 get_header();
 ?>
-
-  <main id="main" class="site-main">
-
-    <div class="container">
-      <?php the_breadcrumb (); ?>
-
-      <div class="row">
-        <div class="col-12">
+	<div class="row">
+					<div class="col-md-12 col-sm-12">
           <?php
           while ( have_posts() ) :
             the_post();

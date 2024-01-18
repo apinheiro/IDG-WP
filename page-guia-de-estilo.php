@@ -14,11 +14,8 @@
 
 get_header();
 ?>
-
-	<main id="main" class="site-main">
-		<div class="container">
-			<div class="row">
-				<div class="col">
+	<div class="row">
+					<div class="col-md-12 col-sm-12">
 					<h2>Guia de estilo</h2>
 				</div>
 			</div>

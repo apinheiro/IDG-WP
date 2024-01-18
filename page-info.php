@@ -1,13 +1,8 @@
 <?php /* Template Name: Informação ao Cidadão */ ?>
 
 <?php get_header(); ?>
-
-<main id="page-info" class="site-main">
-	<div class="container">
-		<div class="row">
-			<?php the_breadcrumb(); ?>
-		</div>
-
+<div class="row">
+					<div class="col-md-12 col-sm-12">
 		<?php wp_reset_postdata(); ?>
 
 		<div id="content" class="pt-5">

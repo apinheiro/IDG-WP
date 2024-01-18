@@ -9,13 +9,8 @@
 
 get_header();
 ?>
-
-	<main id="main" class="site-main">
-		<div class="container">
-			<?php the_breadcrumb (); ?>
-
-			<div id="content" class="row">
-				<div class="col-12">
+	<div class="row">
+					<div class="col-md-12 col-sm-12">
 
 					<h1 class="page-title text-center">
 						<?php printf( esc_html__( 'Busca: %s', 'idg-wp' ), '<span>' . get_search_query() . '</span>' ); ?>
