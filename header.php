@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="https://apinheiro.github.io/tainacan-site/govbr/assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri(); ?>/assets/stylesheets/dist/bundle.min.css"/>
 
-	<?php //wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body>

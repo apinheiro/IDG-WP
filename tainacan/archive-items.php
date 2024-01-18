@@ -8,11 +8,11 @@
 					<?php echo share_box('',true); ?>
 				</div>
 			</div>
-		</div>
-
+		
 		<div class="pt-4 pb-4">
 			<?php tainacan_the_faceted_search(); ?>
 		</div>
+</div>
 	</main>
 
 <?php get_footer(); ?>
