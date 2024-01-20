@@ -12083,3 +12083,7 @@ p img.alignright, p img.alignleft {
 .wp-block-tainacan-facets-list ul.facets-list.facets-layout-grid li.facet-list-item a,
 .wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-grid li.facet-list-item a {
   text-decoration: none; }
+
+.conheca-nosso-acervo{
+  background: url("../../img/fundo_conheca_acervo.png") no-repeat;
+}
