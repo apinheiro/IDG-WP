@@ -1,15 +1,16 @@
 <?php
 	$args = [];
-	if( idg_wp_get_option('_main_carousel') ){
-		$args['category_name'] = idg_wp_get_option('_main_carousel');
-	}
-	
+
+
+	$args['category_name'] = "main-carousel";
 	if( idg_wp_get_option('_main_carousel_slides') ){
 		$args['posts_per_page'] = idg_wp_get_option('_main_carousel_slides');
 	} else {
 		$args['posts_per_page'] = 3;
 	}
+
 	$feature_news_query = new WP_Query( $args );
+
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
 
 		<div id="jumbotron-carousel" class="carousel slide carousel-fade" data-ride="carousel"
@@ -24,11 +25,13 @@
 						$post_thumb = get_template_directory_uri() . '/assets/img/corte.jpg';
 					}
 					?>
-					<img class="d-block w-100" src="<?php echo $post_thumb; ?>" alt="Second slide">
+					<img class="d-block w-100 banner" src="<?php echo $post_thumb; ?>" alt="Second slide">
 					<div class="carousel-caption d-md-block">
 						<div class="container">
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<?php the_excerpt(); ?>
+							<div class="col-6">
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<?php the_excerpt(); ?>
+							</div>
 						</div>
 					</div>
 				</div>

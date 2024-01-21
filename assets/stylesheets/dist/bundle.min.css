@@ -12087,3 +12087,7 @@ p img.alignright, p img.alignleft {
 .conheca-nosso-acervo{
   background: url("../../img/fundo_conheca_acervo.png") no-repeat;
 }
+
+.banner {
+  filter: brightness(30%);
+}

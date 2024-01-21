@@ -47,9 +47,8 @@
           <div class="header-top">
             <div class="header-logo">
               <a href="/">
-              <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"/></a>
-              <span class="br-divider vertical"></span>
-              <div class="header-sign">Minstério da Gestão e da Inovação em Serviços Públicos</div>
+              <img src="https://www.gov.br/ds/assets/img/govbr-logo.png" alt="logo"/></a>
+             
             </div>
             <div class="header-actions">
               <div class="header-links dropdown">
@@ -109,12 +108,12 @@
       <main class="d-flex flex-fill mb-5" id="main">
         <div class="container-fluid">
           <div class="row">
-            <div class="br-menu" id="main-navigation">
+            <div class="br-menu push" id="main-navigation">
               <div class="menu-container">
                 <div class="menu-panel">
                   <div class="menu-header">
                     <div class="menu-title">
-                      <img src="https://apinheiro.github.io/tainacan-site/govbr/imagens/logo_spu.png" alt="Imagem ilustrativa"/><span>Memória SPU</span></div>
+                      <img src="https://www.gov.br/" alt="Imagem ilustrativa"/><span>Memória<b>SPU</b></span></div>
                       <div class="menu-close">
                         <button class="br-button circle" type="button" aria-label="Fechar o menu" data-dismiss="menu"><i class="fas fa-times" aria-hidden="true"></i>
                         </button>

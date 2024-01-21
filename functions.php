@@ -434,6 +434,7 @@ remove_filter( 'pre_term_description', 'wp_filter_kses' );
 function idg_wp_get_option ( $option ) {
 	$theme_key = strtolower(get_stylesheet());
 	$option_key = $theme_key . '_theme_options';
+
 	return get_option($option_key . $option);
 }
 
