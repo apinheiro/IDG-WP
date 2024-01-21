@@ -1,6 +1,7 @@
                 <!-- Three columns of text below the carousel -->
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row rounder-md justify-content-center align-items-center mt-3 p-3 text-white conheca-nosso-acervo">
+                    <div class="col-1"></div>
                         <div class="col-5 mt-3 p-3 text-uppercase text-center">
                             <div>
                                 <span class="text-weight-bold text-up-01">conheça nosso</span><br>
@@ -15,5 +16,6 @@
                             <a href="/memoria" class="br-button secondary mt-2">Histórico</a><br>
                             <em class="text-down-01">Documentos que registram a história do Brasil</em>
                         </div>
+                        <div class="col-1"></div>
                     </div>
                 </div>

@@ -23,6 +23,12 @@ get_header();
 
 		<?php get_template_part('template-parts/sections-entrada'); ?>
 
+		<?php get_template_part('template-parts/busca-acervo'); ?>
+
+		<?php get_template_part('template-parts/exposicoes'); ?>
+
+		
+
 		<section id="news" class="pb-5 pt-5 bg-grey-2">
 			<div class="container">
 				<div class="row">

@@ -470,12 +470,12 @@ function idg_wp_get_available_social_networks() {
 }
 
 function custom_search_form( $form ) {
-	$form = '<form role="search" method="get" id="main-search" action="http://172.18.0.4/">
+	$form = '<form role="search" method="get" id="main-search" action="/">
 			<div class="header-search" id="main-searchbox">
               <div class="br-input has-icon">
                 <label for="searchbox">Texto da pesquisa</label>
                 <input id="searchbox" type="text" placeholder="O que você procura?" value="' . get_search_query() . '" name="s"/>
-                <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
+                <button class="br-button circle small" type="submit" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
                 </button>
               </div>
               <button class="br-button circle search-close ml-1" type="submit" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
