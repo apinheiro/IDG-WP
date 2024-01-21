@@ -5,13 +5,13 @@
 	if( idg_wp_get_option('_main_carousel_slides') ){
 		$args['posts_per_page'] = idg_wp_get_option('_main_carousel_slides');
 	} else {
-		$args['posts_per_page'] = 3;
+		$args['posts_per_page'] = 4;
 	}
 
 	$feature_news_query = new WP_Query( $args );
 
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
-     <h2 class="ml-6">Exposições</h2>
+     <h2 class="ml-6 mt-3">Exposições</h2>
      <div class="row br-slick-cards">
         <?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>
         <?php
@@ -30,7 +30,7 @@
         <div class="col-3 m-2 br-card">
             <div class="card-content">
                 <a href="<?php the_permalink(); ?>" draggagle="false">
-                    <img src="<?= $imagem_src ?>" draggagle="false">
+                    <img src="<?= $imagem_src ?>" draggagle="false"  class="card-img w-100">
                 </a>
                 <span class="text-weight-bold"><?php the_title(); ?></span>
                 <?php the_excerpt(); ?>

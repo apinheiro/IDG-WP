@@ -8,10 +8,10 @@
  * @author André Pinheiro -- UFF
  */
 ?>
-<div class="container">
-    <div class="row justify-content-md-center mt-3 align-items-center">
+<div class="container mt-6 mb-6">
+    <div class="row justify-content-md-center mt-3 mb-6 align-items-center">
         <div class="col-3 text-center font-weight-bold text-interactive text-up-02">Pesquisa geral no acervo</div>
-        <div class="col-4 br-input has-icon">
+        <div class="col-8 br-input has-icon">
             <form method="get" name="form_tainacan" action="/">
             <input id="searchbox" type="text" placeholder="O que você procura?" value="" name="s" class="rounder-lg" />
                 <button class="br-button circle small" type="submit" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>

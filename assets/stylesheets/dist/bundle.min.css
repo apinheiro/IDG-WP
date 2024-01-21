@@ -3139,7 +3139,8 @@ body.high-contrast .card {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px); }
+  border-radius: calc(0.25rem - 1px);
+  max-height: 370px; }
 
 .card-img-top {
   width: 100%;
@@ -4268,7 +4269,11 @@ button.close {
 
 .carousel-caption p{
   color: #fff !important;
-  width: 40% !important;
+  width: 60% !important;
+}
+
+.carousel-caption h2{
+  font-weight: bold;
 }
 
 .align-baseline {
@@ -9332,7 +9337,7 @@ body.high-contrast .subpages-menu .menu-content button {
   background: #000000; }
   @media (min-width: 1150px) {
     .carousel-wrapper {
-      min-height: 350px; } }
+      min-height: 400px; } }
 
 @media (min-width: 320px) and (max-width: 1150px) {
   .carousel-wrapper {
@@ -9352,14 +9357,14 @@ body.high-contrast .subpages-menu .menu-content button {
         .carousel-wrapper #jumbotron-carousel .carousel-indicators li.active {
           background-color: white; }
     .carousel-wrapper #jumbotron-carousel .carousel-item {
-      max-height: 350px; }
+      max-height: 400px; }
 
 @media (min-width: 320px) and (max-width: 1150px) {
   .carousel-wrapper #jumbotron-carousel .carousel-item {
-    max-height: 350px; } }
+    max-height: 400px; } }
       .carousel-wrapper #jumbotron-carousel .carousel-item img {
         display: block;
-        height: 350px;
+        height: 400px;
         object-fit: cover; }
 
 @media (min-width: 320px) and (max-width: 1150px) {
@@ -12007,5 +12012,10 @@ p img.alignright, p img.alignleft {
 }
 
 .banner {
-  filter: brightness(30%);
+  filter: brightness(85%);
+}
+
+.acervo{
+  line-height: 0.5 !important;
+  font-size:12.5px;
 }

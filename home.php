@@ -27,6 +27,9 @@ get_header();
 
 		<?php get_template_part('template-parts/exposicoes'); ?>
 
+		<?php get_template_part('template-parts/noticias-entrada'); ?>
+
+
 		
 
 		<section id="news" class="pb-5 pt-5 bg-grey-2">
