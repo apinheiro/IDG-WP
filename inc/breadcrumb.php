@@ -21,19 +21,18 @@ function the_breadcrumb() {
 	if( $hide_breadcrumbs ) {
 		return;
 	}
+	// Do not display on the homepage
+	if ( !is_front_page() ) {
 
-	// Build the breadcrums
+		// Build the breadcrums
 	echo '<div class="br-breadcrumb">
 	<ul class="crumb-list">
                   <li class="crumb home">
                     <a class="br-button circle" href="/"><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
                    ';
 
-	// Do not display on the homepage
-	if ( !is_front_page() ) {
-		echo "<!-- is front -->";
+				   
 		if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
-			echo "<!-- arquivo -->";
 
 			echo '<li class="crumb"><strong>' . post_type_archive_title('', false) . '</strong></li>';
 
@@ -265,8 +264,7 @@ function the_breadcrumb() {
 		}
 	
 	} else {
-		echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i><a href="/">Início</a>
-		</li>';
+		echo "";
 	}
 
 	echo "</ul></div>";

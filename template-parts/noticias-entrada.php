@@ -6,8 +6,8 @@
 	$feature_news_query = new WP_Query( $args );
 
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
-    <h3 class="ml-6 mt-6">Destaques</h3>
-    <div class="container">
+    <h2 class="ml-5 mt-5">Destaques</h2>
+    <div class="container mt-5">
     <div class="row justify-content-center">
     <?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>
         <div class="col-6 ">

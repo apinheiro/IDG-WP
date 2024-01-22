@@ -42,7 +42,7 @@
 <div class="template-base">
       <nav class="br-skiplink"><a class="br-item" href="#main-content" accesskey="1">Ir para o conteúdo (1/4) <span class="br-tag text ml-1">1</span></a><a class="br-item" href="#header-navigation" accesskey="2">Ir para o menu (2/4) <span class="br-tag text ml-1">2</span></a><a class="br-item" href="#main-searchbox" accesskey="3">Ir para a busca (3/4) <span class="br-tag text ml-1">3</span></a><a class="br-item" href="#footer" accesskey="4">Ir para o rodapé (4/4) <span class="br-tag text ml-1">4</span></a>
       </nav>
-      <header class="br-header mb-4" id="header" data-sticky="data-sticky">
+      <header class="br-header" id="header" data-sticky="data-sticky">
         <div class="container-fluid">
           <div class="header-top">
             <div class="header-logo">
@@ -105,7 +105,7 @@
           </div>
         </div>
       </header> 
-      <main class="d-flex flex-fill mb-5" id="main">
+      <main class="d-flex flex-fill" id="main">
         <div class="container-fluid">
           <div class="row">
             <div class="br-menu push" id="main-navigation">
@@ -137,5 +137,5 @@
                 <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
               </div>
             </div>
-            <div class="col mb-5">
+            <div class="col">
               <?php the_breadcrumb (); ?>

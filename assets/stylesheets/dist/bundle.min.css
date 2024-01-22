@@ -3249,32 +3249,6 @@ body.high-contrast .card {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-.breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  background-color: #e9ecef;
-  border-radius: 0.25rem; }
-
-.breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem; }
-  .breadcrumb-item + .breadcrumb-item::before {
-    display: inline-block;
-    padding-right: 0.5rem;
-    color: #6c757d;
-    content: "/"; }
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline; }
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: none; }
-
-.breadcrumb-item.active {
-  color: #6c757d; }
-
 .pagination {
   display: flex;
   padding-left: 0;
@@ -7883,11 +7857,13 @@ body.high-contrast #main-single {
     margin: 0 auto; }
 
 .child-theme .menu-item-home a {
-  font-size: 0; }
+  font-size: 0;
+  margin-left: 5px; }
   .child-theme .menu-item-home a:before {
     content: "";
     font-size: 17px;
     font-family: 'icomoon'; }
+
 
 .align-center {
   align-items: center; }
@@ -9267,70 +9243,6 @@ body.high-contrast .subpages-menu .menu-content button {
 .high-contrast #events-archive {
   background-color: #000000 !important; }
 
-#breadcrumb-wrapper {
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
-@media (min-width: 320px) and (max-width: 1150px) {
-  #breadcrumb-wrapper {
-    height: auto;
-    border: none; } }
-  #breadcrumb-wrapper #breadcrumb {
-    font-size: 1rem;
-    background: none;
-    margin: 0; }
-
-@media (min-width: 320px) and (max-width: 1150px) {
-  #breadcrumb-wrapper #breadcrumb {
-    height: 40px;
-    display: flex;
-    flex-basis: initial;
-    align-items: center;
-    padding: 0 15px;
-    flex-wrap: initial; }
-    #breadcrumb-wrapper #breadcrumb:before {
-      content: "";
-      width: calc(100% + 30px);
-      margin-left: -15px;
-      position: absolute;
-      height: 1px;
-      background: #E5E5E5;
-      left: 0;
-      bottom: 0; } }
-
-@media (min-width: 320px) and (max-width: 1150px) {
-  #breadcrumb-wrapper #breadcrumb li {
-    font-size: 0.85rem;
-    white-space: nowrap; }
-    #breadcrumb-wrapper #breadcrumb li:last-child {
-      overflow: hidden;
-      text-overflow: ellipsis; } }
-    #breadcrumb-wrapper #breadcrumb li a {
-      color: #222222; }
-    #breadcrumb-wrapper #breadcrumb li.item-home a {
-      display: inline-block;
-      position: relative;
-      text-decoration: none; }
-      #breadcrumb-wrapper #breadcrumb li.item-home a span {
-        font-size: 0;
-        text-indent: -999px; }
-      #breadcrumb-wrapper #breadcrumb li.item-home a:before {
-        font-size: 16px; }
-
-@media (min-width: 320px) and (max-width: 1150px) {
-  #breadcrumb-wrapper #breadcrumb li.item-home a:before {
-    font-size: 12px; } }
-    #breadcrumb-wrapper #breadcrumb li.separator {
-      margin: 0 15px;
-      color: #E5E5E5;
-      font-size: 0.8rem; }
-
-@media (min-width: 320px) and (max-width: 1150px) {
-  #breadcrumb-wrapper #breadcrumb li.separator {
-    margin: 0 8px; } }
-    .high-contrast #breadcrumb-wrapper #breadcrumb a {
-      color: #FFFFFF !important; }
 
 .carousel-wrapper {
   margin: 0;
@@ -10280,9 +10192,6 @@ body.high-contrast #posts-list li {
   #page-info .content-wrapper {
     text-align: center; }
 
-  #page-info #breadcrumb-wrapper #breadcrumb li a,
-  #page-info #breadcrumb-wrapper #breadcrumb li.separator {
-    color: #FFFFFF; }
   #page-info .entry-content {
     max-width: none; }
 
@@ -11892,12 +11801,6 @@ p img.alignright, p img.alignleft {
   background: none !important;
   background-color: transparent !important; }
 
-/* BREADCRUMB */
-#breadcrumb-wrapper .breadcrumb li + li:before {
-  display: none; }
-
-#breadcrumb-wrapper .breadcrumb a {
-  padding: 0; }
 
 .theme-items-list.repository-level-page.is-fullscreen {
   position: fixed; }
@@ -11927,4 +11830,8 @@ p img.alignright, p img.alignleft {
 .acervo{
   line-height: 0.5 !important;
   font-size:12.5px;
+}
+
+.menu-item{
+  margin-left: 6px;
 }
