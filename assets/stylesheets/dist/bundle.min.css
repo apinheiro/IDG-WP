@@ -11835,3 +11835,8 @@ p img.alignright, p img.alignleft {
 .menu-item{
   margin-left: 6px;
 }
+
+img.noticia{
+  max-height: 300px;
+  object-fit: cover;
+}

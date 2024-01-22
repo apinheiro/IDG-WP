@@ -11,7 +11,7 @@
 	$feature_news_query = new WP_Query( $args );
 
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
-     <h2 class="ml-6 mt-4">Exposições</h2>
+     <h2 class="ml-6 mt-4 text-weight-semi-bold">Exposições</h2>
      <div class="row br-slick-cards">
         <?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>
         <?php
