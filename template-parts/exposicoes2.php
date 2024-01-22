@@ -13,7 +13,7 @@
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
      <a name="exposicoes"></a>
 
-     <h2 class="ml-6 mt-4 text-weight-semi-bold">Exposições</h2>
+     <h1 class="ml-6 mt-4 text-weight-semi-bold">Exposições</h1>
      
      <div class="row br-slick-cards">
         <?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>

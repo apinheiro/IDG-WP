@@ -7,7 +7,7 @@
 
 	// if ( $feature_news_query->have_posts() ) : $i = 0; ?>
     <a name="destaque"></a>
-    <h2 class="ml-5 mt-5 text-weight-semi-bold">Destaques</h2>
+    <h1 class="ml-5 mt-5 text-weight-semi-bold">Destaques</h1>
     <div class="container mt-5">
     <div class="row justify-content-center">
          <div class="col-6 ">
