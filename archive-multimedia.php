@@ -10,13 +10,6 @@
 get_header();
 ?>
 
-	<main id="main" class="site-main multimedia-archive">
-		<div class="container">
-			<div class="row">
-				<?php the_breadcrumb(); ?>
-			</div>
-		</div>
-
 		<section id="multimidia">
 			<header class="page-header">
 				<?php the_archive_title( '<h1 class="page-title text-center mt-1">', '</h1>' ); ?>

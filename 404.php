@@ -9,14 +9,6 @@
 
 get_header();
 ?>
-
-	<main id="main" class="site-main error-404 not-found">
-
-		<div class="container">
-			<div class="row">
-				<?php the_breadcrumb(); ?>
-			</div>
-
 			<div class="row" id="content">
 				<div class="col-12 pt-4 pb-4">
 					<header class="entry-header">

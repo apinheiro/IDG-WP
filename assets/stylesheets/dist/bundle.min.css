@@ -9249,7 +9249,7 @@ body.high-contrast .subpages-menu .menu-content button {
   background: #000000; }
   @media (min-width: 1150px) {
     .carousel-wrapper {
-      min-height: 400px; } }
+      min-height: 450px; } }
 
 @media (min-width: 320px) and (max-width: 1150px) {
   .carousel-wrapper {
@@ -9269,15 +9269,15 @@ body.high-contrast .subpages-menu .menu-content button {
         .carousel-wrapper #jumbotron-carousel .carousel-indicators li.active {
           background-color: white; }
     .carousel-wrapper #jumbotron-carousel .carousel-item {
-      max-height: 400px; }
+      max-height: 450px; }
 
 @media (min-width: 320px) and (max-width: 1150px) {
   .carousel-wrapper #jumbotron-carousel .carousel-item {
-    max-height: 400px; } }
+    max-height: 450px; } }
       .carousel-wrapper #jumbotron-carousel .carousel-item img {
-        display: block;
-        height: 400px;
-        object-fit: cover; }
+        position: relative;
+        height: 450px;
+        object-fit: cover;}
 
 @media (min-width: 320px) and (max-width: 1150px) {
   .carousel-wrapper #jumbotron-carousel .carousel-item img {

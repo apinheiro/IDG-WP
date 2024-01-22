@@ -23,10 +23,10 @@ function the_breadcrumb() {
 	}
 	// Do not display on the homepage
 	if ( !is_front_page() ) {
-
+		echo "<!-- não é front -->";
 		// Build the breadcrums
 	echo '<div class="br-breadcrumb">
-	<ul class="crumb-list">
+		<ul class="crumb-list">
                   <li class="crumb home">
                     <a class="br-button circle" href="/"><span class="sr-only">Página inicial</span><i class="fas fa-home"></i></a></li>
                    ';
@@ -262,10 +262,11 @@ function the_breadcrumb() {
 			echo '<li class="crumb"><i class="icon fas fa-chevron-right"></i><a href="/">Início</a>
 				</li>';
 		}
+		echo "</ul></div>";
 	
 	} else {
 		echo "";
 	}
 
-	echo "</ul></div>";
+	
 }

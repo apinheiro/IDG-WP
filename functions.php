@@ -58,8 +58,6 @@ if ( ! function_exists( 'idg_wp_setup' ) ) :
 		 */
 		add_theme_support( 'html5', array(
 			'search-form',
-			'comment-form',
-			'comment-list',
 			'gallery',
 			'caption',
 		) );
@@ -107,13 +105,13 @@ function idg_wp_app_env() {
  * Enqueue scripts and styles.
  */
 function idg_wp_scripts() {
-	if( idg_wp_app_env() === 'development' ){
-		wp_enqueue_style( 'idg-wp-style', get_template_directory_uri() . '/assets/stylesheets/dist/bundle.css', false, '1.2' );
-	} else {
+	#if( idg_wp_app_env() === 'development' ){
+	#	wp_enqueue_style( 'idg-wp-style', get_template_directory_uri() . '/assets/stylesheets/dist/bundle.css', false, '1.2' );
+	#} else {
 		wp_enqueue_style( 'idg-wp-style', get_template_directory_uri() . '/assets/stylesheets/dist/bundle.min.css', false, '1.2'  );
-	}
+	#}
 
-	wp_enqueue_style('material-design-icons-cdn-style', 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css', null, microtime());
+	#wp_enqueue_style('material-design-icons-cdn-style', 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css', null, microtime());
 	wp_enqueue_style('slick-theme-style', get_template_directory_uri() . '/assets/stylesheets/src/vendor/slick/slick-theme.css', null, microtime());
 	wp_enqueue_style('slick-style', get_template_directory_uri() . '/assets/stylesheets/src/vendor/slick/slick.css', null, microtime());
 
@@ -122,7 +120,6 @@ function idg_wp_scripts() {
 	} else {
 		wp_enqueue_script( 'idg-wp-scripts', get_template_directory_uri() . '/assets/js/dist/bundle.min.js', array('jquery'), '1.2', true );
 	}
-	wp_enqueue_script( 'barra-brasil-script', 'http://barra.brasil.gov.br/barra_2.0.js', false, false, true );
 
 	wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/js/src/vendor/slick.min.js', null, microtime(), true);
 
