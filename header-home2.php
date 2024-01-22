@@ -103,6 +103,10 @@
             <?php get_search_form(); ?>
             
           </div>
+          <hr>
+          <section>
+              <?php get_template_part('template-parts/menu-superior-home'); ?>
+            </section>
         </div>
       </header> 
       <main class="d-flex flex-fill" id="main">

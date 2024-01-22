@@ -12,13 +12,10 @@
  * @package Identidade_Digital_do_Governo_-_WordPress
  */
 
-get_header();
+get_header('home2');
 ?>
 <div class="row">
 <div class="col-md-12 col-sm-12">
-        <section>
-			<?php get_template_part('template-parts/menu-superior-home'); ?>
-		</section>
 		<section class="carousel-wrapper">
 			<?php get_template_part('template-parts/jumbotron-carousel'); ?>
 		</section>
